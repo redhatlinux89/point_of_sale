@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAIN</title>
+
+ 
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="JS/js.js"></script>
+  <script>
+  $( function() {
+    obtiene(3,1,0); // retorna las posiciones de los botonoes si exixten
+    hide_menu();
+    $(".hamb").click(function (){
+      show_menu();
+    });
+
+    $("#close").click(function(){
+      console.log("close");
+      hide_menu();
+    });
+
+$( "#droppable" ).droppable({
+  classes: {
+    "ui-droppable-active": "ui-state-active",
+    "ui-droppable-hover": "ui-state-hover"
+  },
+  drop: function( event, ui ) {
+    $( this )
+      .addClass( "ui-state-highlight" )
+      .find( "p" );
+        //.html( "Dropped!" );
+  }
+});
+
+  } );
+
+  </script>
+  <style>
+    .container { width: 900px; height: 700px;}
+    .resizable { width: 150px; height: 150px; padding: 0.5em; }
+    .draggable { width: 150px; height: 150px; padding: 0.5em; };
+  
+   
+    </style>
+</head>
+<body>
+
+   <!-- Navigation bar -->
+   <div class="row align-items-center" id="p2">
+    
+    
+    <header class="header">
+      <!-- Logo -->
+      <a href="#" class="logo">LR</a>
+      <!-- Hamburger icon -->
+      <input class="side-menu" type="checkbox" id="side-menu"/>
+      <label class="hamb" for="side-menu"><span class="hamb-line" id="close"></span></label>
+      <!-- Menu -->
+      <nav class="nav">
+          <ul class="menu">
+              <li><i class="fa-solid fa-hand-holding-dollar space" style="color: #ffffff;"></i><a href="#" class="menu_opc">Ventas</a></li>
+              <li><i class="fa-sharp fa-solid fa-receipt space" style="color: #ffffff;"></i><a href="#" class="menu_opc">Productos</a> </li>
+              <li><i class="fa-solid fa-user space" style="color: #ffffff;"></i><a href="#" class="menu_opc">Admin mesas</a></li>
+          </ul>
+      </nav>
+  </header>
+  <!-- Main content -->
+  <main>
+      <article>
+        <div id="droppable" class="">
+  
+        </div>
+      </article>
+  </main>
+
+
+
+    </div> 
+  
+
+
+
+
+  <script src="JS/main.js"></script>
+  <link rel="stylesheet" href="Estilos/Styles.css">
+  <link rel="stylesheet" href="Estilos/menu2.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</body>
+</html>

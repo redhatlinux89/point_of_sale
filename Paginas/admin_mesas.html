@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="../JS/js.js"></script>
+  <script>
+  $( function() {
+    obtiene(3,1,0); // retorna las posiciones de los botonoes si exixten
+ 
+$( "#droppable" ).droppable({
+  classes: {
+    "ui-droppable-active": "ui-state-active",
+    "ui-droppable-hover": "ui-state-hover"
+  },
+  drop: function( event, ui ) {
+    $( this )
+      .addClass( "ui-state-highlight" )
+      .find( "p" );
+        //.html( "Dropped!" );
+  }
+});
+
+  } );
+
+  </script>
+  <style>
+    .container { width: 900px; height: 700px;}
+    .resizable { width: 150px; height: 150px; padding: 0.5em; }
+    .draggable { width: 150px; height: 150px; padding: 0.5em; };
+  
+   
+    </style>
+</head>
+<body>
+
+<div id="droppable" class="ui-widget-header container">
+  <div id="boton">
+
+  </div>
+  <button type="button" class="btn btn-primary" onclick="obtiene(4,1,0)">AGREGAR MESASs</button>
+
+</div>
+
+
+  <script src="../JS/js.js"></script>
+</body>
+</html>
